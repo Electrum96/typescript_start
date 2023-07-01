@@ -6,12 +6,27 @@
 // 10, 0.5, 0.0001, -50, 
 // true, false
 
-const isBirthday: boolean = true;
-let age: number;
-const userName: string = 'John';
+const isBirthdayData: boolean = true;
+let ageData: number = 40;
+const userNameData: string = 'John';
 
-age = 40;
 
-if (isBirthday) {
-    console.log(`Congrats ${userName.toUpperCase()}, age: ${age + 1}`); 
+// function logBrdMsg (isBirthday: boolean, userName: string, age: number): string {
+//     // void полное игнорирование возвращаемого значения,  если явно не указан - undefined
+//     if (isBirthday) {
+//         return `Congrats ${userName.toUpperCase()}, age: ${age + 1}`; 
+//     } else {
+//         return "Error";
+//     }
+// }
+
+const logBrdMsg = (isBirthday: boolean, userName: string, age: number): string  => {
+    // void полное игнорирование возвращаемого значения,  если явно не указан - undefined
+    if (isBirthday) {
+        return `Congrats ${userName.toUpperCase()}, age: ${age + 1}`; 
+    } else {
+        return "Error";
+    }
 }
+
+logBrdMsg(isBirthdayData, userNameData, 40);
