@@ -1,49 +1,27 @@
-// let userName: string = "Kate"; //указание нужного типа
+const isBirthdayData : boolean = true;
+const userNameData : string = "Kate";
+let ageData : number = 27;
 
-// userName = 6;
+const createError = (msg: string) => {
+    // throw new Error(msg); never никакое значение не может быть возвращено
+    // console.log(1); сюда код не дойдет
+    //if (msg) throw new Error(msg); void (дойдёт до undefined)
+    // while (true) {
+    // } цикл никогда не закончится never
+    throw new Error(msg);
+    
+};
 
-// '', "", ``
-// 10, 0.5, 0.0001, -50, 
-// true, false
-
-const isBirthdayData: boolean = true;
-let ageData: number = 40;
-const userNameData: string = 'John';
-
-
-// function logBrdMsg (isBirthday: boolean, userName: string, age: number): string {
-//     // void полное игнорирование возвращаемого значения,  если явно не указан - undefined
-//     if (isBirthday) {
-//         return `Congrats ${userName.toUpperCase()}, age: ${age + 1}`; 
-//     } else {
-//         return "Error";
-//     }
-// }
-
-// let salary;
-// salary = 5000; //избегать такую запись
-
-let salary: number; //указание типа сразу
-salary: 5000;
-
-const userData = '{"isBirthdayData": true, "ageData": 40, "userNameData: "John"}';
-
-const userObj: {
-    //аннотация объекта
-    isBirthdayData: boolean,
-    userNameData: string,
-    ageData: number;
-} = JSON.parse(userData);
-console.log(userObj.smt());
-
-
-const logBrdMsg = (isBirthday: boolean, userName: string, age: number): string => {
-    // void полное игнорирование возвращаемого значения,  если явно не указан - undefined
-    if (isBirthday) {
+// исчерпывающая проверка
+const logBrdMsg = (isBirthday : boolean, userName : string, age : number) : string => {
+    if (isBirthday === true) {
         return `Congrats ${userName.toUpperCase()}, age: ${age + 1}`;
-    } else {
-        return "Error";
+    } else if (isBirthday === false) {
+        return  "Too bad"
     }
+    return  createError("Error"); //возвращает never
 }
 
 logBrdMsg(isBirthdayData, userNameData, 40);
+
+// const smth: never = null; нельзя назначить в never
