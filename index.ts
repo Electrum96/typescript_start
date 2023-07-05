@@ -1,27 +1,23 @@
-const isBirthdayData : boolean = true;
-const userNameData : string = "Kate";
-let ageData : number = 27;
+const test: null = null;
+const test2: any = null;
+const test3: string = null;
+const test4: number = null;
 
-const createError = (msg: string) => {
-    // throw new Error(msg); never никакое значение не может быть возвращено
-    // console.log(1); сюда код не дойдет
-    //if (msg) throw new Error(msg); void (дойдёт до undefined)
-    // while (true) {
-    // } цикл никогда не закончится never
-    throw new Error(msg);
-    
-};
+const test5: undefined = undefined;
+const test6: any = undefined;
+const test7: string = undefined;
 
-// исчерпывающая проверка
-const logBrdMsg = (isBirthday : boolean, userName : string, age : number) : string => {
-    if (isBirthday === true) {
-        return `Congrats ${userName.toUpperCase()}, age: ${age + 1}`;
-    } else if (isBirthday === false) {
-        return  "Too bad"
+let smth; // по умолчанию подставляется any
+
+function getRandomData() {
+    if(Math.random() < 0.5){
+        return null
+    } else {
+        return ' Some data ';
     }
-    return  createError("Error"); //возвращает never
 }
 
-logBrdMsg(isBirthdayData, userNameData, 40);
+const data =  getRandomData();
+const trimmedData = data ? data.trim() : null;
 
-// const smth: never = null; нельзя назначить в never
+
