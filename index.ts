@@ -4,12 +4,12 @@ let ageData : number = 27;
 
 const userData = {
     isBirthdayData: true,
-    userNameData: "Kate",
     ageData: 27,
+    userNameData: "Kate",
     messages: {
-        error: "Error"
+        error: "error"
     }
-};
+}
 
 const createError = (msg : string) => {
     throw new Error(msg);
@@ -17,16 +17,16 @@ const createError = (msg : string) => {
 };
 
 function logBrdMsg({
-    isBirthdayData, 
-    ageData, 
-    userNameData, 
-    messages: 
-    {error},
-    }: {
-    isBirthdayData: boolean;
-    userNameData: string;
-    ageData: number;
-    messages: { error: string}
+    isBirthdayData,
+    ageData,
+    userNameData,
+    messages: {error}
+}: {
+    isBirthdayData: boolean,
+    ageData: number
+    userNameData: string
+    messages: {error: string}
+
 }) : string {
     if (isBirthdayData) {
         return `Congrats ${userNameData.toUpperCase()}, age: ${ageData + 1}`;
@@ -38,4 +38,4 @@ function logBrdMsg({
 
 console.log(logBrdMsg(userData));
 
-// const smth: never = null; нельзя назначить в never
+//object
