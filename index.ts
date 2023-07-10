@@ -20,12 +20,12 @@ function logBrdMsg({
     isBirthdayData,
     ageData,
     userNameData,
-    messages: {error}
+    messages: {error} //деструктуризация вложенного объекта
 }: {
     isBirthdayData: boolean,
     ageData: number
     userNameData: string
-    messages: {error: string}
+    messages: {error: string} //типизация свойств объекта
 
 }) : string {
     if (isBirthdayData) {
@@ -39,3 +39,6 @@ function logBrdMsg({
 console.log(logBrdMsg(userData));
 
 //object
+
+const departments: string[] = ["marketing", "dev", "design"];
+const num: number[] = [1,2,3,4,5]; //типизация массива 
