@@ -195,14 +195,3 @@
 
 
 
-//   const key = "Naz_Extr_Id";
-//   const sorted = data.sort();
-//   console.log(sorted);
-
-//   class  implements Responce {
-	
-// 	data.sort(function (user1: string|number , user2: string|number) { return user1[key] > user2[key] ? 1 : -1; });
-// 	sort(): number {
-	
-// 	}
-//   }
