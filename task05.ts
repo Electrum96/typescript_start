@@ -1,14 +1,13 @@
-export default function filterAnagrams (word: string, anagrams: string[]): string[] {
-    const standart = word.split('').sort().join('')
-    return anagrams.filter((item) => item.split('').sort().join('') === standart)
+// export default function filterAnagrams (word: string, anagrams: string[]): string[] {
+//     const standart = word.split('').sort().join('')
+//     return anagrams.filter((item) => item.split('').sort().join('') === standart)
 
-} // массивы
+// } // массивы
 
 //надо вывести в порядке сортировки по 
 // полям Naz_Extr_Id DESC,  Appointment_Plan_Dt ASC
 
- interface Responce {
-	sort(): number;
+    const objectArray: {
 	Mdoc_Id: string;
 	Sex: number;
 	Patient_Age: number;
@@ -37,9 +36,7 @@ export default function filterAnagrams (word: string, anagrams: string[]): strin
 	Severity_Color?: string;
 	Surname?: string;
 	Patron?: string;
-  };
-
-const data: Responce = [{
+  } [] = [{
     Mdoc_Id: "b1d14aac-d449-11ed-9b9a-00155d03c95c",
     Sex: 2,
     Patient_Age: 86,
@@ -149,17 +146,60 @@ const data: Responce = [{
     Gravity: 2,
     Num: 10915,
     Nz_Id: "53b95767-95a0-4413-bdfe-9dde6254ff76",
-    Appointment_Name: "Обзорная рентгенография почек и мочевыводящих путей"
-  }]
+    Appointment_Name: "Обзорная рентгенография почек и мочевыводящих путей",
+	Naz_Extr_Id: 0,
+    Hold_Usr_Uuid: null,
+    Placement_Dt: "2023-07-12 00:33:31.28876",
+    Appointment_Plan_Dt: "2023-07-12 11:08:31",
+    Sort_Surname: "МАРТЮШИНА",
+    Severity_Color: "Color_Yellow",
+    Surname: "1add77c0-cf07-11ed-9b28-00155d03c95c",
+    Patron: "И-"
+  }];
 
   const key = "Naz_Extr_Id";
-  const sorted = data.sort(function (user1, user2) { return user1[key] > user2[key] ? 1 : -1; });
-  console.log(sorted);
 
-  class  implements Responce {
+  const sortedAsc:{
+	Mdoc_Id: string;
+	Sex: number;
+	Patient_Age: number;
+	Bed_Direction: string;
+	Bed_Id: number;
+	Kis_Usr_Uuid: string;
+	Total_Naz_Color: string;
+	Date_2_Hosp: string;
+	Dept_Placement_Dt: string;
+	Profile_Name: string;
+	Hosp_Transport: string;
+	Moby_Medic_Color: string;
+	Name: string;
+	Ehr_Case_Id: string;
+	Diagnosis: string;
+	Exec_Usr_Id: string;
+	Gravity: number;
+	Num: number;
+	Nz_Id: string;
+	Appointment_Name: string;
+	Naz_Extr_Id?: number;
+	Hold_Usr_Uuid?: any;
+	Placement_Dt?: string;
+	Appointment_Plan_Dt?: string;
+	Sort_Surname?: string;
+	Severity_Color?: string;
+	Surname?: string;
+	Patron?: string;
+  } [] = objectArray.sort(function (user1, user2) { return user1.Naz_Extr_Id > user2.Naz_Extr_Id ? 1 : -1; })
+
+
+
+//   const key = "Naz_Extr_Id";
+//   const sorted = data.sort();
+//   console.log(sorted);
+
+//   class  implements Responce {
 	
-	data.sort(function (user1: string|number , user2: string|number) { return user1[key] > user2[key] ? 1 : -1; });
-	sort(): number {
+// 	data.sort(function (user1: string|number , user2: string|number) { return user1[key] > user2[key] ? 1 : -1; });
+// 	sort(): number {
 	
-	}
-  }
+// 	}
+//   }
