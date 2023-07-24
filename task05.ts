@@ -159,7 +159,7 @@
 
   const key = "Naz_Extr_Id";
 
-  const sortedAsc:{
+  const sortedDesc:{
 	Mdoc_Id: string;
 	Sex: number;
 	Patient_Age: number;
@@ -190,7 +190,7 @@
 	Patron?: string;
   } [] = objectArray.sort(function (user1, user2) { return user1.Naz_Extr_Id > user2.Naz_Extr_Id ? 1 : -1; })
 
-  console.log(sortedAsc);
+  console.log(sortedDesc);
   
 
 
