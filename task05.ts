@@ -28,7 +28,7 @@
 	Num: number;
 	Nz_Id: string;
 	Appointment_Name: string;
-	Naz_Extr_Id?: number;
+	Naz_Extr_Id: number;
 	Hold_Usr_Uuid?: any;
 	Placement_Dt?: string;
 	Appointment_Plan_Dt?: string;
@@ -189,6 +189,9 @@
 	Surname?: string;
 	Patron?: string;
   } [] = objectArray.sort(function (user1, user2) { return user1.Naz_Extr_Id > user2.Naz_Extr_Id ? 1 : -1; })
+
+  console.log(sortedAsc);
+  
 
 
 
