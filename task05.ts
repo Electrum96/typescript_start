@@ -147,7 +147,7 @@
     Num: 10915,
     Nz_Id: "53b95767-95a0-4413-bdfe-9dde6254ff76",
     Appointment_Name: "Обзорная рентгенография почек и мочевыводящих путей",
-	Naz_Extr_Id: 0,
+	Naz_Extr_Id: 0, 
     Hold_Usr_Uuid: null,
     Placement_Dt: "2023-07-12 00:33:31.28876",
     Appointment_Plan_Dt: "2023-07-12 11:08:31",
