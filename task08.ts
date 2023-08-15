@@ -36,6 +36,31 @@ return -1; //если el за пределами
 console.log(serachElement(arr, 4));
 console.log(searchElement1(arr, 1)); //  результатом  получаю индекс элемента
 
+/////////////////////////////////////////////
+
+const arr2 = [0,1,2,3,4,5,6,7,8,9];
+
+function binSearch2(arr2: number[], num: number) {
+    let min = -1;
+    let max = arr2.length;
+
+     while(max - min > 1){
+    const mid = Math.floor((max-min )/ 2);
+
+    if (arr2[mid] === num) {
+        return num
+    }
+    if(arr2[mid] > num){
+        max = mid;
+    } else {
+        min = mid;
+    }
+}
+    return -1;
+    
+}
+console.log(binSearch2(arr2, 2));
+
 /////////////////////////////////////////////////////////
 
 const newArray: number[] = [1,2,3,2,4,5,2,3,8,12,10,3];
