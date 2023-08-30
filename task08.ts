@@ -45,7 +45,7 @@ function binSearch2(arr2: number[], num: number) {
     let max = arr2.length;
 
      while(max - min > 1){
-    const mid = Math.floor((max-min )/ 2);
+    const mid = Math.floor((max+min )/ 2);
 
     if (arr2[mid] === num) {
         return num
